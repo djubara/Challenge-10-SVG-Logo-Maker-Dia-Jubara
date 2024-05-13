@@ -1,11 +1,9 @@
+// Parent class of Circle, Square, Triangle.
 class Shape {
     constructor(text, textColor, shapeColor) {
         this.text = text;
         this.textColor = textColor;
         this.shapeColor = shapeColor;
-    }
-    render() {
-        return ``
     }
 }
 
