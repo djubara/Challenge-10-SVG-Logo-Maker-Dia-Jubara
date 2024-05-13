@@ -1,0 +1,29 @@
+// function called in index.js within generateSVGLogo.
+// This function creates the SVG logo based on the user's input. The user created logo can be viewed by opening the ./assets/html/index.html in the browser.
+
+const Circle = require("./Shapes/Circle");
+const Square = require("./Shapes/Square");
+const Triangle = require("./Shapes/Triangle");
+const Star = require("./Shapes/Star");
+
+const { log } = require("console");
+
+function selectShape(response) {
+    let logoShape = response.logoShape;
+
+    switch (logoShape) {
+        case "Circle":
+            logoShape = new Circle(response.text, response.textColor, response.logoColor);
+            break;
+        case "Square":
+            logoShape = new Square(response.text, response.textColor, response.logoColor);
+            break;
+        case "Triangle":
+            logoShape = new Triangle(response.text, response.textColor, response.logoColor);
+            break;
+        case "Star":
+            logoShape = new Star(response.text, response.textColor, response.logoColor);
+            break;
+    }
+}
+module.exports = selectShape;
