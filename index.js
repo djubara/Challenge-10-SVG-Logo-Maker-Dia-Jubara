@@ -5,7 +5,7 @@ const questions = require("./lib/questions");
 const fileName = require("./lib/logo");
 const w3sColors = require("./lib/w3sColors");
 const generateSVGLogo = require("./lib/generateSVGLogo");
-// const { Circle, Square, Triangle } = require("./lib/shapes");
+const { Circle, Square, Triangle } = require("./Lib/shapes/Shape");
 // const validate = require("./lib/validate");
 
 
