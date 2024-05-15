@@ -1,18 +1,18 @@
-// Packages needed for this application
+// Packages needed for this application:
 const inquirer = require("inquirer");
 const fs = require("fs"); //file system
 const questions = require("./Lib/dist/questions");
-const fileName = require("./assets/img/logo.svg");
-const colors = require("./Lib/colors/w3sColors");
+const fileName = "./assets/img/logo.svg";
+// const colors = require("./Lib/colors/w3sColors");
 const selectShape = require("./Lib/dist/selectShape");
-const generateSVGLogo = require("./Lib/dist/generateSVGLogo");
+// const generateSVGLogo = require("./Lib/dist/generateSVGLogo");
 // const { Circle, Square, Triangle } = require("./Lib/shapes/Shape");
 // const validate = require("./lib/validate");
 
 // function to generate SVG logo
-function generateSVGLogo(response) {
+function generateLogo(response) {
     const logo = selectShape(response);
-    fs.writeFile(fileName, logo, () => {
+    fs.writeFile(fileName, logo, (err) => {
         if (err) {
             console.log("Error: SVG Logo not generated!");
         }
@@ -25,7 +25,7 @@ function generateSVGLogo(response) {
 // function to initialize program and prompt user
 function init() {
     inquirer.prompt(questions).then((response) => {
-        generateSVGLogo(response);
+        generateLogo(response);
     })
         .catch((error) => {
             console.log(error);
@@ -34,16 +34,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-
-
-
-
-// const fileName = "assets/logo.svg";
-
-// writeToFile(fileName, shapes.render(text, textColor, logoColor), "utf8");
-// const error = "Error: SVG Logo not generated!";
-// console.log(error ? error : "SVG Logo Generated Successfully!");
-// });
-// }

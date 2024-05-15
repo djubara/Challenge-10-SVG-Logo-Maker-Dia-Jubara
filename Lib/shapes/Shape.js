@@ -1,4 +1,5 @@
-// Parent class of Circle, Square, Triangle.
+// Parent class of Circle, Square, Triangle
+
 class Shape {
     constructor(text, textColor, shapeColor) {
         this.text = text;
@@ -6,5 +7,4 @@ class Shape {
         this.shapeColor = shapeColor;
     }
 }
-
 module.exports = Shape;
