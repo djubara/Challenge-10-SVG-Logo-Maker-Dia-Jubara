@@ -26,7 +26,7 @@ function selectShape(response) {
         case "Star":
             logoShape = new Star(response.text, textColor, logoColor);
             break;
-        case "SixSidedPolygon":
+        case "Six-Sided Polygon":
             logoShape = new SixSidedPolygon(response.text, textColor, logoColor);
             break;
 
