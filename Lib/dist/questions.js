@@ -31,11 +31,16 @@ function validateColorHex(answer) {
 }
 
 // User input block
+console.log(" ============================================");
+console.log("║      Welcome to the SVG Logo Generator!    ║");
+console.log(" ============================================");
+console.log("\n");
+console.log("✨ Please note that selecting the same color for the text and the shape will result in the text being invisible.");
+console.log("✨ Please follow the prompts to generate your logo.");
+console.log("==================================================================================================================");
+console.log("\n");
 const questions = [
-
-
     // Text input block
-
     {
         // selecting the text and the color of the text for the logo
         // the length of the text should be between 1 and 3 characters and will be validated
@@ -43,11 +48,16 @@ const questions = [
         // The color of the text will be set to the selected color but cannot be the same as the color of the shape.     
 
         type: "input",
-        message: "Please enter up to 3 characters for your logo:",
+        message: "Please enter 1 to 3 characters for your logo:",
         name: "text",
         validate: (answer) => {
             if (answer.length === 0 || answer.length > 3) {
                 console.log("\n Please enter 1 to 3 characters");
+                return false;
+            }
+            else if (answer === " " || answer === "  " || answer === "   ") {
+                console.log("\n Please erase all the space bar characters by clicking the backspace and re-enter 1 to 3 valid characters");
+                answer.length
                 return false;
             }
             return true;
@@ -57,12 +67,14 @@ const questions = [
         // the user is prompted to select a color from the list of colors or enter a hexadecimal number. 
 
         type: "list",
+        loop: false,
         message: "Please select the method you would like to use to select a text color:",
         name: "textColorInputMethod",
         choices: ["Keyword Selection", "Hexadecimal Input"],
     },
     {
         type: "list",
+        loop: false,
         name: "textKeywordColor",
         message: "Please select a color for the text by selecting a keyword from the list:",
         choices: w3sColors,
