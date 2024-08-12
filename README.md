@@ -17,13 +17,15 @@
 
   The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
 
-* Screen shot:
+> ## Screen shot
 
   ![image](./assets/img/DiaLogo.png)
 
-* Video:
+> ## Video
 
-  [![Watch the video]](https://app.screencastify.com/v2/manage/videos/KnzWM0Ig53bEBpdSQupQ)
+  [Google Drive Video Link:](https://drive.google.com/file/d/1zC_BRIXhMDEj7shOfV5q2Edj-grx_iQS/view?usp=sharing)
+
+  [Screen Castify Video Link:](https://app.screencastify.com/v2/manage/videos/KnzWM0Ig53bEBpdSQupQ)
 
 ### User Story
 
